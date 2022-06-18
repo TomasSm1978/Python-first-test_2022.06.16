@@ -17,7 +17,8 @@ class Movie:
         self.budget = budget
 
     def __repr__(self):
-        return(f"{self.title}, {self.director}, {self.budget}")
+        return(f"{self.title}, {self.director}, {self.budget}, {self.was_expensive()}")
+
 
     def was_expensive(self):
         if self.budget > 100000000:
@@ -25,11 +26,13 @@ class Movie:
         else:
             return False
 
+
+
 m1 = Movie('Pirates of the Caribbean: On Stranger Tides', 'Rob Marshall', 422000000)
 m2 = Movie('Toy Story 4', 'Josh Cooley', 200000000)
 m3 = Movie('Juno', 'Jennifer Garner', 7500000)
 
-print(f"{m1}, {m1.was_expensive()}")
-print(f"{m2}, {m2.was_expensive()}")
-print(f"{m3}, {m3.was_expensive()}")
+print(f"{m1}")
+print(f"{m2}")
+print(f"{m3}")
 
