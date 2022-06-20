@@ -1,4 +1,3 @@
-
 # Sukurkite klasę "Movie", kuri gebės sukurti objektus 3 savybėm ir 1 metodu.
 # Naudojant šią klasę sukurkite bent du skirtingus objektus.
 
@@ -8,7 +7,7 @@
 # budget: number
 
 # Metodas:
-# was_expensive() - jeigu filmo "budget" yra daugiau nei 100 000 000 mln USD, tada grąžins True, kitu atveju False.
+# was_expensive() - jeigu filmo "budget" yra daugiau nei 100 000 000 USD, tada grąžins True, kitu atveju False.
 
 class Movie:
     def __init__(self, title: str, director: str, budget: int):
@@ -17,7 +16,7 @@ class Movie:
         self.budget = budget
 
     def __repr__(self):
-        return(f"{self.title}, {self.director}, {self.budget}")
+        return (f"{self.title}, {self.director}, {self.budget}, {self.was_expensive()}")
 
     def was_expensive(self):
         if self.budget > 100000000:
@@ -25,11 +24,11 @@ class Movie:
         else:
             return False
 
+
 m1 = Movie('Pirates of the Caribbean: On Stranger Tides', 'Rob Marshall', 422000000)
 m2 = Movie('Toy Story 4', 'Josh Cooley', 200000000)
 m3 = Movie('Juno', 'Jennifer Garner', 7500000)
 
-print(f"{m1}, {m1.was_expensive()}")
-print(f"{m2}, {m2.was_expensive()}")
-print(f"{m3}, {m3.was_expensive()}")
-
+print(m1)
+print(m2)
+print(m3)
