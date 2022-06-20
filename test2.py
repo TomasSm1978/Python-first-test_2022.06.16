@@ -1,8 +1,8 @@
 # Turimas "users" masyvas.
 
-# Parašykite funkcijas, kurios atlikas nurodytas užduotis:
+# Parašykite funkcijas, kurios atliks nurodytas užduotis:
 # 1. funkcija "get_user_average_age" - kaip argumentą priims masyvą ir duoto masyvo
-# atveju grąžins visų "users" amžiaus visurkį kaip skaičių.
+# atveju grąžins visų "users" amžiaus vidurkį kaip skaičių.
 # 2. funkcija "get_user_names" -  kaip argumentą priims masyvą ir duoto masyvo
 # atveju grąžins visų "users" vardus naujame list'e pvz., ['Alex John', 'Ann Smith'...].
 
@@ -24,15 +24,15 @@ users = [
 def get_user_average_age(x):
     age_sum = 0
     for user in x:
-        # print(user['age'])
         age_sum += user['age']
-    print(f"Visų 'users' amžiaus vidurkis yra: {float(age_sum / len(x))}")
+    print(f"Visų 'users' amžiaus vidurkis yra: {round((age_sum / len(x)), 2)} metai(-ų)")
 
 
 def get_user_names(x):
     user_names_list = []
     for user in x:
         user_names_list.append(user['name'])
+        user_names_list.sort()
     print(f"'Users vardai naujame list'e: {user_names_list}")
 
 
