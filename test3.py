@@ -2,7 +2,6 @@
 
 # Parašykite funkciją "show_object_values", kuri kaip argumentą priims objektą
 # ir grąžins visus jo "values" list'e.
-import json
 
 audi = {
     "make": 'audi',
@@ -11,11 +10,13 @@ audi = {
     "color": 'white',
 }
 
+
 def show_object_values(x):
+    values_list = []
     # print(list(x.values()))
-    new_list = []
     for key, value in x.items():
-        new_list.append(value)
-    print(new_list)
+        values_list.append(value)
+    print(values_list)
+
 
 show_object_values(audi)
